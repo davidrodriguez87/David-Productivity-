@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  overscroll-behavior: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.gd-display {
+  font-family: 'Playfair Display', serif;
+  color: #3A2A22;
+}
+
+.gd-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-touch-callout: none;
+  overscroll-behavior: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gd-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  border: 2px solid #EADBC8;
+  background: #FFFDFB;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: 180ms;
+}
+.gd-checkbox:checked {
+  background: #6E9B5E;
+  border-color: #6E9B5E;
+}
+.gd-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+@keyframes gd-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.gd-pop {
+  animation: gd-pop 300ms ease;
+}
